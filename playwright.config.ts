@@ -29,6 +29,15 @@ export default defineConfig({
         launchOptions: { args: ['--no-sandbox'] },
       },
     },
+    {
+      name: 'merx',
+      testMatch: '**/tests/solicitation_management/merx/**/*.spec.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: urls.MERX,
+        launchOptions: { args: ['--no-sandbox'] },
+      },
+    },
   ],
   timeout: 90_000,
   outputDir: 'test-results',
